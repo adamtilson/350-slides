@@ -1,1 +1,0 @@
-![](N-block-second-strategy.png)
