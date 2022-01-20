@@ -21,8 +21,6 @@ layout: false
 1. All Horses are the Same Color
 1. Tiling Puzzle
 1. Prove Something Harder
-1. Invariants
-1. The 8-Puzzle
 ]
 ---
 
@@ -114,7 +112,7 @@ Template:
 
 ---
 ## Example 1
-Theorem: $\forall n \geq 0, 1+2+3+...+n = \dfrac{n(n+1)}{2}$
+Theorem: $\forall n \gt 0, 1+2+3+...+n = \dfrac{n(n+1)}{2}$
 We could also write this as:
 $$\sum_{i=1}^{n}i = \dfrac{n(n+1)}{2}$$
 
@@ -125,11 +123,11 @@ $P(n) := \sum_{i=1}^{n}i = \dfrac{n(n+1)}{2}$
 ---
 ## Example 1
 Proof (by ordinary induction).  
-Inductive Hypothesis: $\forall n \geq 0, P(n) := \sum_{i=1}^{n}i = \dfrac{n(n+1)}{2}$
+Inductive Hypothesis: $\forall n \gt 0, P(n) := \sum_{i=1}^{n}i = \dfrac{n(n+1)}{2}$
 
 Base Case:
-- $\sum_{i=1}^{0}i = \dfrac{0(0+1)}{2}$
-- $0 = 0 \checkmark$
+- $\sum_{i=1}^{1}i = \dfrac{1(1+1)}{2}$
+- $1 = 1 \checkmark$
 ---
 ## Example 1
 Inductive Step: $P(n) \Rightarrow P(n+1)$
@@ -172,7 +170,7 @@ Induction Hypothesis: $\forall n \in \mathbb{N}, P(n) := 3 \mid (n^3-n)$
 
 Base Case:
 
-$P(n)=0^3-0$
+$P(0)=0^3-0$
 $= 0$
 
 $3\mid 0 \checkmark$
@@ -316,7 +314,9 @@ Induction Step: $P(n) \Rightarrow P(n+1)$
 
 We need to consider a $2^n \times 2^n$ courtyard, compared to a $2^{n+1} \times 2^{n+1}$ courtyard.
 
-Each time the size doubles.
+Each time the dimensions doubles.
+
+The total size increases 4$\times$.
 
 ---
 ## Relationship between n and n+1...
@@ -345,24 +345,24 @@ Each time the size doubles.
 Proof: By ordinary induction
 - Base Case: $n=0$, Still one tile, still holds  
 - Induction Hypothesis: $P(n) \Rightarrow P(n+1)$
-    - "If we can tile an $n \times n$ area with any square missing, we can tile an $(n+1) \times (n+1)$ area with any square missing"
+    - "If we can tile a $2^n \times 2^n$ area with any square missing, we can tile an $2^{n+1} \times 2^{n+1}$ area with any square missing"
 ---
 ## Tougher Problem Proof
-- Assuming we can place the statue in any square of an $n \times n$ area
-- An $(n+1) \times (n+1)$ region consists of four $n \times n$ regions 
-- Choose any of the four regions, and place the statue in any square
+- Assume we can place the statue in any square of a $2^n \times 2^n$ area
+- A $2^{n+1} \times 2^{n+1}$ area consists of four $2^n \times 2^n$ regions 
+- Choose any of the four regions, and place the empty square in any location
 - In the remaining three regions:
     - Since we can place the empty square anywhere (Induction Hypothesis)
-    - We will place the empty square in the center of the new $(n+1) \times (n+1)$ region, i.e., The corner of the respective $n \times n$ region.
+    - We will place the empty square in the center of the new $2^{n+1} \times 2^{n+1}$ region, i.e., the corner of the respective $2^n \times 2^n$ regions.
     - We tile the three adjacent empty squares with a single L-tile
 - Since $P(0), P(n) \Rightarrow P(n+1)$, the theorem is true for all $n$. $\square$
 
 ---
 ## Final Tips on Induction
 - Did I prove the base case?
-- Did I use the induction hypothesis, i.e. use P(n) somewhere in the proof?
-- Did I logically show than, assuming P(n), P(n+1) is also true?
-- Are there any steps from 1...n where this induction would not hold?
+- Did I use the induction hypothesis, i.e. use $P(n)$ somewhere in the proof?
+- Did I logically show than, assuming $P(n), P(n+1)$ is also true?
+- Are there any steps from $1...n$ where this induction would not hold?
     - We'll look at strategies for this in the next lecture!
 
 ---

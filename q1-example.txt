@@ -1,0 +1,34 @@
+
+(1)
+It's Raining -> I have my Umbrella
+- I have my umbrella
+
+- It is Raining
+- It is not Raining
+* Not enough info to be certain
+
+(2)
+It's Raining -> I have my Umbrella
+- I do not have my umbrella
+
+- It is Raining
+* It is not Raining
+- Not enough info to be certain
+
+P = It's Raining
+Q = I have my umbrella
+P -> Q
+
+~Q -> ~P
+
+~Q = I do not have my umbrella
+~P = It is not raining
+~Q -> ~P
+
+(3)
+It's Raining <-> I have my Umbrella
+- I have my umbrella
+
+* It is Raining
+- It is not Raining
+- Not enough info to be certain

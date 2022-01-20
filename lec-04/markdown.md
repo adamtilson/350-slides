@@ -452,17 +452,12 @@ $= \dfrac{2kn+2k-2k^2}{2} + \dfrac{k^2-k}{2} + \dfrac{n^2+n-nk-nk-k+k^2}{2}$
 
 $= \dfrac{2kn+2k-2k^2 + k^2-k + n^2+n-nk-nk-k+k^2}{2}$
 ---
-$= \dfrac{2kn+2k-2k^2 + k^2-k + n^2+n-nk-nk-k+k^2}{2}$
-
-$= \dfrac{n^2+n}{2}$
-
-$ S(n+1) = \dfrac{(n+1)(n+1-1)}{2}$
-
-$ S(n+1) = \dfrac{(n+1)(n)}{2}$
-
-$ S(n+1) = \dfrac{n^2+n}{2} \checkmark$
-
-$\therefore$ all strategies for the n-block game produce the same score. $\square$
+- $= \dfrac{2kn+2k-2k^2 + k^2-k + n^2+n-nk-nk-k+k^2}{2}$
+- $= \dfrac{n^2+n}{2}$
+- $ S(n+1) = \dfrac{(n+1)(n+1-1)}{2}$
+- $ S(n+1) = \dfrac{(n+1)(n)}{2}$
+- $ S(n+1) = \dfrac{n^2+n}{2} \checkmark$
+- $\therefore$ all strategies for the n-block game produce the same score. $\square$
 
 ---
 
